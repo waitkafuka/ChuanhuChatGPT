@@ -134,6 +134,7 @@ class OpenAIClient(BaseLLMModel):
             "presence_penalty": self.presence_penalty,
             "frequency_penalty": self.frequency_penalty,
         }
+        logging.info('发起请求，openai_api_key: ' + openai_api_key)
 
         if self.max_generation_token is not None:
             payload["max_tokens"] = self.max_generation_token

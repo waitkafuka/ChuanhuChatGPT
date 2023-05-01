@@ -1,0 +1,33 @@
+Fontconfig warning: ignoring UTF-8: not a valid region tag
+2023-04-29 09:47:53,386 [INFO] [models.py:551] 正在加载OpenAI模型: gpt-3.5-turbo
+2023-04-29 09:47:53,386 [INFO] [models.py:593] 模型设置为了： gpt-3.5-turbo
+2023-04-29 09:47:54,265 [INFO] [utils.py:404] **您的IP区域：中国。请立即检查代理设置，在不受支持的地区使用API可能导致账号被封禁。**
+2023-04-29 09:47:54,342 [INFO] [ChuanhuChatbot.py:459] [42m
+川虎的温馨提示：访问 http://localhost:7860 查看界面[0m
+2023-04-29 09:48:00,694 [INFO] [models.py:551] 正在加载OpenAI模型: gpt-3.5-turbo
+2023-04-29 09:48:00,694 [INFO] [models.py:593] 模型设置为了： gpt-3.5-turbo
+2023-04-29 09:48:00,771 [INFO] [ChuanhuChatbot.py:274] Get User Name: zks
+2023-04-29 09:48:00,771 [INFO] [models.py:551] 正在加载OpenAI模型: gpt-3.5-turbo
+2023-04-29 09:48:00,771 [INFO] [models.py:593] 模型设置为了： gpt-3.5-turbo
+Traceback (most recent call last):
+  File "/opt/homebrew/lib/python3.10/site-packages/gradio/routes.py", line 399, in run_predict
+    output = await app.get_blocks().process_api(
+  File "/opt/homebrew/lib/python3.10/site-packages/gradio/blocks.py", line 1299, in process_api
+    result = await self.call_function(
+  File "/opt/homebrew/lib/python3.10/site-packages/gradio/blocks.py", line 1022, in call_function
+    prediction = await anyio.to_thread.run_sync(
+  File "/opt/homebrew/lib/python3.10/site-packages/anyio/to_thread.py", line 31, in run_sync
+    return await get_asynclib().run_sync_in_worker_thread(
+  File "/opt/homebrew/lib/python3.10/site-packages/anyio/_backends/_asyncio.py", line 937, in run_sync_in_worker_thread
+    return await future
+  File "/opt/homebrew/lib/python3.10/site-packages/anyio/_backends/_asyncio.py", line 867, in run
+    result = context.run(func, *args)
+  File "/Users/zks/code/github/ChuanhuChatGPT/ChuanhuChatbot.py", line 280, in create_greeting
+    return user_info, user_name, current_model, toggle_like_btn_visibility(DEFAULT_MODEL), *current_model.auto_load(), get_history_names(False, user_name)
+  File "/Users/zks/code/github/ChuanhuChatGPT/modules/models/base_model.py", line 577, in auto_load
+    history_file_path = get_history_filepath(self.user_identifier)
+  File "/Users/zks/code/github/ChuanhuChatGPT/modules/utils.py", line 583, in get_history_filepath
+    latest_file = get_latest_filepath(dirname)
+  File "/Users/zks/code/github/ChuanhuChatGPT/modules/utils.py", line 570, in get_latest_filepath
+    for filename in os.listdir(dirname):
+FileNotFoundError: [Errno 2] No such file or directory: 'history/zks'

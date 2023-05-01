@@ -1,0 +1,20 @@
+{
+  "openai_api_key": "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",
+  "xmchat_api_key": "",
+  "language": "auto",
+  "users": [["zks", "123"]],
+  "render_latex": true,
+  "local_embedding": false,
+  "hide_history_when_not_logged_in": false,
+  "default_model": "gpt-3.5-turbo",
+  "advance_docs": {
+    "pdf": {
+      "two_column": false,
+      "formula_ocr": true
+    }
+  },
+  "multi_api_key": false,
+  "share": true,
+  "server_name": "0.0.0.0",
+  "server_port": 80
+}
